@@ -1,0 +1,161 @@
+
+:root {
+    --primary: #4a7c59;
+    --bg: #fdfbf7;
+    --card: #ffffff;
+    --text: #333;
+    --border: #e2e8f0;
+}
+body { 
+    font-family: system-ui, sans-serif; 
+    background: var(--bg); 
+    color: var(--text); 
+    margin: 0; 
+    line-height: 1.6; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+nav { 
+    background: var(--card); 
+    padding: 1rem 2rem; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
+}
+.brand a { 
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    color: var(--primary); 
+    text-decoration: none; 
+}
+.nav-links a { 
+    margin-left: 1.5rem; 
+    text-decoration: none; 
+    color: var(--text); 
+    font-weight: 500;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--primary); }
+
+main { 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 3rem 2rem; 
+    width: 100%; 
+    flex: 1; 
+}
+h1, h2, h3 { color: var(--primary); margin-bottom: 1rem; }
+a { text-decoration: none; color: inherit; }
+
+.hero { text-align: center; margin-bottom: 3rem; }
+.hero p { color: #666; }
+.hero .accent { color: var(--primary); font-weight: 500; font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+.product-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 2rem; 
+}
+.product-card { 
+    background: var(--card); 
+    border: 1px solid var(--border); 
+    border-radius: 8px; 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    transition: transform 0.2s; 
+}
+.product-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+.product-image { 
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    background: #eee; 
+}
+.product-details { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+.product-price { font-size: 1.25rem; font-weight: bold; color: var(--primary); margin: 0.5rem 0; }
+
+
+.form-container { 
+    background: var(--card); 
+    padding: 2rem; 
+    border-radius: 8px; 
+    border: 1px solid var(--border); 
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+.form-group { margin-bottom: 1rem; }
+label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+input, textarea, select { 
+    width: 100%; 
+    padding: 0.6rem; 
+    border: 1px solid var(--border); 
+    border-radius: 4px; 
+    font-size: 1rem; 
+}
+table { width: 100%; border-collapse: collapse; background: var(--card); margin-top: 1rem; }
+th, td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+th { background: #f8fafc; }
+
+
+.btn { 
+    display: inline-block; 
+    padding: 0.6rem 1.2rem; 
+    border-radius: 4px; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 1rem; 
+    background: #eee; 
+    color: #333; 
+    text-align: center;
+}
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { opacity: 0.9; }
+.btn-danger { background: #e53e3e; color: white; }
+.btn-secondary { background: #fff; border: 1px solid var(--border); }
+
+.cart-summary { 
+    background: var(--card);
+    padding: 1.5rem;
+    margin-top: 2rem; 
+    text-align: right; 
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+.summary-row { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+.total-row { font-weight: bold; font-size: 1.2rem; color: var(--primary); border-top: 1px solid var(--border); padding-top: 1rem; }
+
+.invoice-box { background: white; padding: 3rem; max-width: 800px; margin: 0 auto; border: 1px solid var(--border); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.invoice-header { display: flex; justify-content: space-between; margin-bottom: 2rem; border-bottom: 2px solid var(--primary); padding-bottom: 1rem; }
+.checkout-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+@media (max-width: 700px) { 
+    .nav-links { display: none; } 
+    .checkout-layout { grid-template-columns: 1fr; } 
+}
+
+.payment-option {
+    border: 2px solid var(--border);
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.payment-option:hover {
+    border-color: var(--primary);
+}
+
+.payment-option.selected {
+    border-color: var(--primary);
+    background-color: #e8f5e9; /* Light green background */
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 10px;
+}
+

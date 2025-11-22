@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Very Vegan Cafe</title>
+    <link rel="stylesheet" href="../Codes/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="brand"><a href="index.html">Very Vegan Cafe</a></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="cart.html">Your Order <span id="cart-count">(0)</span></a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="checkout-container">
+            <h1>Checkout</h1>
+            <form id="checkout-form" onsubmit="processOrder(event)">
+                <div class="checkout-section">
+
+    <h2>Customer Information</h2>
+    <div class="form-row">
+        <div class="form-group">
+            <label>First Name <span class="required">*</span></label>
+            <input type="text" id="firstName" required>
+        </div>
+        <div class="form-group">
+            <label>Last Name <span class="required">*</span></label>
+            <input type="text" id="lastName" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Email <span class="required">*</span></label>
+        <input type="email" id="email" required>
+    </div>
+    <div class="form-group">
+        <label>Phone Number <span class="required">*</span></label>
+        <input type="tel" id="phone" required>
+    </div>
+                <div class="checkout-section">
+                    <h2>Order Type</h2>
+                    <div class="form-group">
+                        <label>How would you like to receive your order? <span class="required">*</span></label>
+                        <select id="orderType" required onchange="togglePickupFields()">
+                            <option value="">Select...</option>
+                            <option value="pickup">Takeout (Pickup)</option>
+                            <option value="dinein">Dine In</option>
+                        </select>
+                    </div>
+
+                    <div id="pickup-fields" style="display: none;">
+                        <div class="form-group">
+                            <label>Table Number <span class="required">*</span></label>
+                            <input type="text" id="tableNumber" placeholder="e.g., Table 5">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Special Requests (Optional)</label>
+                            <textarea id="specialRequests" rows="3" placeholder="Any special seating preferences or requests..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h2>Payment Method</h2>
+                    <div class="payment-methods">
+                        <div class="payment-option" onclick="selectPayment('cash')">
+                            <input type="radio" name="payment" id="payment-cash" value="cash" required>
+                            <label for="payment-cash">Cash</label>
+                        </div>
+                        <div class="payment-option" onclick="selectPayment('card')">
+                            <input type="radio" name="payment" id="payment-card" value="card">
+                            <label for="payment-card">Credit/Debit Card</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout-section">
+                    <h2>Order Summary</h2>
+                    <div id="order-items">
+                    </div>
+                    <div class="order-summary-total">
+                        <span>Total:</span>
+                        <span id="checkout-total">$0.00 JMD</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">
+                    Place Order
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="../Codes/index.js"></script>
+</body>
+</html>
