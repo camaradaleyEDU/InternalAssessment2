@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu - Very Vegan Café</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+         <div class="brand"><a href="index.html">Very Vegan Cafe</a></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="cart.html">Your Order <span id="cart-count">(0)</span></a>
+        </div>
+    </nav>
+
+    <main>
+        <main>
+        <header style="text-align: center; margin-bottom: 4rem;">
+            <h1 style="font-size: 2.5rem;">Welcome to Very Vegan Cafe</h1>
+            <p style="font-size: 1.2rem; color: #4a7c59; font-weight: 500;">Fresh. Organic. 100% Plant-Based.</p>
+            <p style="color: #64748b; margin-top: 0.5rem;">Order online and pick up in store.</p>
+        </header>
+
+        <h2 style="border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-bottom: 2rem;">What will you have today?</h2>
+        <div id="product-grid" class="product-grid">
+        </div>
+    </main>
+    
+        <h1>Our Menu</h1>
+
+
+        <h2>Drinks</h2>
+        <section class="product-grid">
+            
+
+            <div class="product-card">
+                <img class="product-image" src="Iced-Matcha-Latte.jpg">
+                <div class="product-details">
+                    <h3>Iced Matcha Latte</h3>
+                    <p class="product-price">$850 JMD</p>
+                    <button class="btn btn-primary" onclick="addToCart('Iced Matcha Latte', 850)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="lemon-ginger-turmeric-shot.jpg">
+                <div class="product-details">
+                    <h3>Ginger–Turmeric Shot</h3>
+                    <p class="product-price">$450 JMD</p>
+                    <button class="btn btn-primary" onclick="addToCart('Ginger-Turmeric Shot', 450)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="Cold-Brew-Coffee.jpeg">
+                <div class="product-details">
+                    <h3>Cold Brew Coffee</h3>
+                    <p class="product-price">$700 JMD</p>
+                    <button class="btn btn-primary" onclick="addToCart('Cold Brew Coffee', 700)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <h2>Breakfast</h2>
+        <section class="product-grid">
+
+            <div class="product-card">
+                <img class="product-image" src="ackee-toast.jpeg">
+                <div class="product-details">
+                    <h3>Vegan Ackee Toast</h3>
+                    <p class="product-price">$1200 JMD</p>
+                    <button class="btn btn-primary" onclick="addToCart('Vegan Ackee Toast', 1200)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="jerk-tofu-callaloo.jpg">
+                <div class="product-details">
+                    <h3>Tofu Scramble w/ Callaloo</h3>
+                    <p class="product-price">$1100 JMD</p>
+                    <button class="btn btn-primary" onclick="addToCart('Tofu Scramble', 1100)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="pancakes-vegan.jpg">
+                <div class="product-details">
+                    <h3>Banana Oat Pancakes</h3>
+                    <p class="product-price">$1300 JMD</p>
+                    <button class="btn btn-primary" onclick="addToCart('Banana Oat Pancakes', 1300)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <h2>Lunch & Bowls</h2>
+        <section class="product-grid">
+
+            <div class="product-card">
+                <img class="product-image" src="jerk-tofu.jpg">
+                <div class="product-details">
+                    <h3>Jerk Tofu Bowl</h3>
+                    <p class="product-price">$1500 JMD</p>
+                    <button class="btn btn-primary" onclick="addToCart('Jerk Tofu Bowl', 1500)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="curry-chickpeas.jpeg">
+                <div class="product-details">
+                    <h3>Coconut Curry Chickpea Bowl</h3>
+                    <p class="product-price">$1450 JMD</p>
+                    <button class="btn btn-primary" onclick="addToCart('Chickpea Curry Bowl', 1450)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="buddha-bowl-recipe.jpg">
+                <div class="product-details">
+                    <h3>Sweet Potato Buddha Bowl</h3>
+                    <p class="product-price">$1400 JMD</p>
+                    <button class="btn btn-primary" onclick="addToCart('Buddha Bowl', 1400)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <h2>Baked Goods & Snacks</h2>
+        <section class="product-grid">
+
+            <div class="product-card">
+                <img class="product-image" src="banana-bread.jpg">
+                <div class="product-details">
+                    <h3>Vegan Banana Bread</h3>
+                    <p class="product-price">$400 JMD</p>
+                    <button class="btn btn-primary" onclick="addToCart('Banana Bread', 400)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="vegan-cookies.jpg">
+                <div class="product-details">
+                    <h3>Oat Chocolate Chip Cookie</h3>
+                    <p class="product-price">$250 JMD</p>
+                    <button class="btn btn-primary" onclick="addToCart('Oat Cookie', 250)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-image" src="gizzada.jpg">
+                <div class="product-details">
+                    <h3>Coconut Gizzada</h3>
+                    <p class="product-price">$300 JMD</p>
+                    <button class="btn btn-primary" onclick="addToCart('Coconut Gizzada', 300)">Add to Cart</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
